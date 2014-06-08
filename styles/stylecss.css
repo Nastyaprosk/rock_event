@@ -1,0 +1,136 @@
+
+*{
+margin: 0;
+padding: 0;
+outline: 0;
+/* Webkit fixes (Safari/Chrome) */
+-webkit-text-size-adjust: 100%;
+-webkit-font-smoothing: antialiased;
+-webkit-overflow-scrolling: touch;
+-webkit-border-radius: 0px;
+/* IE fixes */
+-ms-interpolation-mode: bicubic;
+-ms-text-size-adjust: 100%;
+/* Firefox fixes */
+-moz-border-radius: 0px;
+border-radius: 0px;
+-khtml-border-radius: 0px;
+}
+
+#rock {
+	position: relative;
+	width:100%;
+	z-index: 99;}
+
+#main_reg {
+	
+
+	font-size: 30px;
+	
+}
+
+#rega {
+	width: 10%;
+	margin: 0 auto;
+}
+
+#container {
+	position: relative;
+	width:500px;
+	height: 500px;
+	background-color: white;
+	border-radius: 7px;
+	box-shadow: 0 0 4px rgba(0,0,0,0.1);
+	margin: 0 auto;
+}
+
+.inp_text {position: relative;
+	width: 37%;
+    height: 10%;
+    background-color: #ececec;
+    border-style: none;
+    border-radius: 4px;
+    padding: 15px;
+    margin-top:10px;
+    margin-left: 10px;
+}
+
+.inp_text::-webkit-input-placeholder { color:#777; }
+
+.forblock {position: relative;
+	display: block;
+padding: 10px;
+margin:15px 15px 15px 10px;
+width:82.9%;
+padding: 15px;
+}
+
+.inp_pos {position: relative;
+	padding-top: 20px;
+	padding-left: 25px;
+}
+
+#zagruz {
+	position: relative;
+	padding-left: 50px;
+}
+
+#obzor {
+	position: relative;
+	width: 70px;
+	height: 40px;
+	background-color: #ececec;
+	text-align: center;
+	display: inline-block;
+	line-height: 40px;
+	margin-left: 15px;
+	border-radius: 2px;
+}
+
+#obzor_pos {position: relative;
+	padding-left: 50px;
+margin: 15px 15px 15px 10px;}
+
+#kriminal {position: absolute;
+	width: 90px;
+	height: 40px;
+	z-index: 999;
+	opacity: 0;
+}
+
+#registr {
+	position: relative;
+	height: 45px;
+	width: 150px;
+	background-color: #ff994f;
+	line-height: 45px;
+	text-align: center;
+	border-radius: 4px 4px 4px 4px;
+	margin-left: 170px;
+	margin-top: 10px;
+	border-style: none;
+}
+
+#registr:active {
+	background-color: #D2691E;
+}
+
+#reg_txt {
+	color: white;
+}
+
+.vopros {
+	position: relative;
+	color: #777;
+	text-align: center;
+	margin-top: 10px;
+	top: 10px;
+}
+
+#vopr {position: relative;
+margin-left: 130px;
+}
+
+#cont {
+	padding-top: 25px;
+}

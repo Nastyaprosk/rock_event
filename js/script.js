@@ -1,6 +1,6 @@
 function slider_init(delay){ // старт слайдера. Принимает интервал смены слайдов в мс (не обязательно)
     $('#slides img:first').show(); // показываем активный слайд
-    slider_buttons_init(); // старт кнопок
+    // старт кнопок
     
     if(typeof delay !== 'undefined'){ // есть delay задан
         setInterval(function(){ // раз в delay мс...
@@ -10,7 +10,7 @@ function slider_init(delay){ // старт слайдера. Принимает 
 }
 
 function slider_change(num){ // смена слайда
-    // получаем индекс активного слайда
+    // получаем индекс активного слайдера
     var active_index = $('#slides img.active').index();
     
     if(num == '1'){ // если надо сдвинуть слайдер вперед
@@ -40,55 +40,9 @@ function slider_change(num){ // смена слайда
     }, 400).delay(2).addClass('active');
 }
 
-function slider_buttons_init(){ // старт кнопок
-    $("#slider_controls #slider_left").click(function(){ // по нажатию на кнопку назад
-        slider_change('0'); // сдвигаем слайдер назад
-    });
-    
-    $("#slider_controls #slider_right").click(function(){ // при нажатии на кнопку вперед
-        slider_change('1'); // сдвинаем слайдер вперед
-    });
-}
 
-function screen_resize(){
-    var h = $(window).height(); // высота окна
-    var w = $(window).width(); // высота
-    
-    $('.screen').height(h); // ставим высоту экранов
-    
-    // HEADER
-    if (h > 737) {
-        var lead_h = 737;
-        $('#lead_container').css('left', ((w - $('#lead').width()) / 2) + 'px');
-    }
-    else if (h < 500){
-        $('#lead_container').css('left', '35px');
-        var lead_h = 500; // ставим высоту #lead = 440
-    }
-    else{
-        var lead_h = h; // натуральная высота 
-    }
-    
-    if (h < 550) {
-        $('#header #arrow:visible').slideUp(200);
-    }
-    else{
-        $('#header #arrow:hidden').slideDown(200);
-        $('#header #arrow').css('top', (lead_h - $('#header #arrow').height() - 70) + 'px');
-    }
-    
-    $('#header #lead').css('top', ((lead_h - $('#lead').height()) / 2) + 'px');
-    $('#header #slides').height(lead_h);
-}
 
-$(document).ready(function(){
-    slider_init(5000); // инициализируем слайдер
-    screen_resize();
-    
-    $('#header #arrow').click(function(){
-        $('html, body').animate({scrollTop: $('#header').height()}, 700);    
-    });
-});
-$(window).resize(function(){
-    screen_resize(); 
-});
+
+
+
+

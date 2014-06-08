@@ -6,26 +6,84 @@
     <link rel="stylesheet" href="css/styleslider.css">
 <link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300&subset=latin,cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
-<script src="js/scripts.js"></script>
+<script src="http://yandex.st/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
+<script src="http://yandex.st/jquery-ui/1.10.4/jquery-ui.min.js" type="text/javascript"></script>
+<script src="js/script.js"></script>
+ <script src="js/js.js"></script>
+
+ <script type="text/javascript">
+$(document).ready(function(){
+    slider_init(5000); // инициализируем слайдер
+   
+    
+    
+});
+
+ </script>
+
 
 </head>
 <body>
 	
 	<div class="header">
-		<div class="header_top">
+			<div id="slides">
 		<div id="slides_content" class="container">
-                    <img class="slide active" src="img/nirvana.jpg">
-                    <img class="slide" src="img/acdc.jpg">
+                    <img class="slide active" src="img/acdc.jpg">
+                    <img class="slide" src="img/nirvana.jpg">
                     <img class="slide" src="img/soad.jpg">
                 </div>
-
-			<div class="nav">
-				<h1 class="logo">ROCK EVENT</h1>
-			</div>
-		</div>
-	</div>
+            </div>
+        </div>
 	<div class="content">
-	<div class="content_top">
+	<div class="content_top"><div class="nav">
+				<h1 class="logo">ROCK EVENT</h1>
+				<select id="select">
+							<option>Дата</option>
+							<option>Январь</option>
+							<option>Февраль</option>
+							<option>Март</option>
+							<option>Апрель</option>
+							<option>Май</option>
+							<option>Июнь</option>
+							<option>Июль</option>
+							<option>Август</option>
+							<option>Сентябрь</option>
+							<option>Октябрь</option>
+							<option>Ноябрь</option>
+							<option>Декабрь</option>
+						</select>
+						<select id="select">
+							<option>Город</option>
+							<option>Альметьевск</option>
+							<option>Бугульма</option>
+							<option>Санкт-Петербург</option>
+							<option>Казань</option>
+							<option>Краснодар</option>
+							<option>Лениногорск</option>
+							<option>Москва</option>
+							<option>Набережные Челны</option>
+							<option>Нижнекамск</option>
+							<option>Новосибирск</option>
+							<option>Омск</option>
+							<option>Томск</option>
+						</select>
+						<select id="select">
+							<option>Жанры</option>
+							<option> Альтернативный</option>
+							<option>Арт-рок‎</option>
+							<option>Блюз-рок‎</option>
+							<option>Брит-поп‎</option>
+							<option>Инди-рок‎</option>
+							<option>Панк-рок‎</option>
+							<option>Прогрессивный рок‎</option>
+							<option>Рок-н-ролл</option>
+							<option>Фолк-рок‎</option>
+							<option>Хард-рок‎</option>=
+						</select>
+						<img src="img/avatar.png">
+						<a href="userpage.html">Антон Смирнов</a>
+					</div>
+				</div>
 		<div class="content_groups"><img src="img/group1.png">
 			<h3>Kodaline</h3>
 			<time>20.02.2014 15.00</time>
@@ -116,8 +174,7 @@
 			<a href="#">Hard Rock</a>
 			<p>Забронировать</p>
 		</div>
-			</div>
-	</div>
+
 
     </body>
     </html>

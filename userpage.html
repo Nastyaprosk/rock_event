@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<head>
+	<title>User</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="styles/usercss.css">
+	<link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300&subset=latin,cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+
+ <style type="text/css">
+    #modal {
+    position: absolute;
+    background-color: white;
+    border-radius: 4PX;
+    z-index: 999;
+    top: 300px;
+    left: 30%;
+    width: 530px;
+    height: 700px;
+ 	line-height: 80px;
+    text-align: center; 
+    display: none;
+    opacity: 2;
+}
+#modal h1{
+    font-family: Segoe UI Light;
+    color: #808080;
+}
+#bg_layer {
+    position: absolute;
+    z-index: 99;
+    width: 100%;
+    height: 2100px;
+    background: #000;
+    opacity: 0.5;
+}
+ </style>
+        <script>
+  $(document).ready(function(){
+    $('#button_new').click(function (e) {
+    // custom handling here
+    e.preventDefault();
+});
+     $('#modal, #bg_layer').css('display','none');
+
+   
+   
+$('button').click(function(){
+    $('#modal, #bg_layer').show();
+
+});
+$.fn.alignCenterScreen = function() {
+    this.css("position", "absolute");
+    this.css("top", ($(window).height() - this.outerHeight()) / 2 + $(window).scrollTop() + "px");
+    this.css("left", ($(window).width() - this.outerWidth()) / 2 + $(window).scrollLeft() + "px");
+    return this
+};
+  $("#modal").alignCenterScreen();            
+});
+
+
+  </script>
+
+</head>
+<body>
+<div id="modal">
+	<h1>Ваши критерии:</h1>
+<form>
+	<input type="text"  placeholder="Название группы">
+	<input type="text" placeholder="Место проведения">
+	<input type="text" placeholder="Дата">
+	<input type="text" placeholder="Предпологаемая цена">
+	<input type="text" placeholder="Возможная скидка">
+	<input type="text" placeholder="Необходимое количество человек">
+	<input type="text" placeholder="Жанр">
+	<textarea placeholder="Описание"></textarea>
+	
+</form>
+
+</div>
+	<div id="bg_layer"></div>
+		<div class="header_top">
+		<div class="header_content">
+			<h1 class="header_name">ROCK EVENT</h1>
+			<h2 class="header_des">Рок концерты в твоем городе</h2>
+</div>
+</div>	 	
+	<div class="userinfo">
+		<img class="userphoto" src="img/avatar.png">
+		<div class="right_column">
+		<p class="username">Антон Смирнов</p>
+		<p class="userlogin">ant_smir</p>
+		<p class="useremail">antonsmirnov67@gmail.com</p>
+	</div>
+	<button class="button_new">Предложить концерт
+	</button>
+		<div>
+	</div>
+</body>
